@@ -1,0 +1,25 @@
+clip,start_s,end_s,title,asset,narration,on_screen,transition
+01,0,5,Cinematic family-gaming opening,"AI-generated B-roll (generate), fallback: Launch screenshot",Every family has a game they love.,,Quick fade through white
+02,5,10,The problem of fair game judging,"AI-generated B-roll, fallback: text card",But who decides what really happened?,Was that a goal?,Cut on whistle
+03,10,15,WASL Arena brand reveal,Real app: launch screen orb (screen capture),"Meet WASL Arena: one family, three games, one fair AI referee.",WASL Arena / One family. Three games. One fair AI referee.,Match-cut orb to app
+04,15,20,"Three games, one AI referee",Real app screenshot: Game library,"Football, Falaj Flow and Souq Signal. Team and individual play.",Football AI · Falaj Flow · Souq Signal,Slide transition left
+05,20,25,Actual app landing page,Real screen recording / screenshot: Launch,"A real app, built for real family game day.",Working prototype,Zoom-through to setup
+06,25,30,Family registration,Real app screenshot: Family setup,"The host registers players, teams and match rules.",Players · Teams · Rules,Wipe up
+07,30,35,Three-game library,Real app screenshot: Game library,Each game uses a different kind of AI.,Tracking · Vision + graph · Vision + speech,Cross-dissolve
+08,35,40,Host console,Real app screenshot: Live Arena,"The host runs rounds, timers and turns.",Record · Upload · Import AI report,Whip pan
+09,40,45,Real football gameplay,REAL FOOTAGE (record). Animatic uses a synthetic fixture frame,"Real play, filmed on a fixed camera.",Real gameplay,Cut on the shot
+10,45,50,Football video analysis,Real app: judging sequence (record from Live Arena),"The AI extracts evidence, detects events and applies the rules.",Extracting evidence → Detecting events → Applying rules,Match cut to replay
+11,50,55,Player and ball tracking,Real evidence frame from the pipeline,It follows the ball and every player.,Ball + player tracking,Slide
+12,55,60,Goal verification and score,Real evidence frame + replay screen,A goal counts only when the ball is seen crossing the line.,Verified goal · Rule FB-1 · +1,Flash cut
+13,60,65,Falaj physical gameplay,REAL FOOTAGE (record). Animatic uses synthetic fixture frame,Falaj Flow: build channels to water the farms.,Falaj Flow · 90 seconds,Cut on last tile
+14,65,70,Visual tile recognition,Real evidence frame from the pipeline,Printed markers tell the AI each tile and its rotation.,Tile type + rotation read from video,Dissolve to twin
+15,70,75,Digital irrigation graph,Real app screenshot: Falaj replay,It rebuilds the network and traces the water.,Digital reconstruction,Slide
+16,75,80,Verified Falaj scoring,Real app screenshot: Falaj replay,"Three farms, zero leaks, a speed bonus: eleven points.",+3 +3 +3 +2 = 11,Whip pan
+17,80,85,Souq physical gameplay,REAL FOOTAGE (record). Animatic uses synthetic fixture frame,"Souq Signal: show it, say it, stay in budget.",Souq Signal,Cut on card reveal
+18,85,90,Visual and speech recognition,Real app screenshot: Souq replay,It sees the card and hears the player.,Vision + speech,Dissolve
+19,90,95,Budget and item verification,Real evidence frame + screenshot,"Items, prices and budget are checked automatically.",AED 55 of 60,Slide
+20,95,100,Souq results,Real app screenshot: Family Cup (demo data),Correct items and matching speech earn points.,Item +2 · Spoken +1 · Over budget −2,Cross-dissolve
+21,100,105,AI Referee Replay,Real app screenshot: Replay (review),"If the AI is unsure, the host decides.",NEEDS_REVIEW → host decision,Whip pan
+22,105,110,Testing and technical evidence,Real app screenshot: Evaluation Lab,"Forty-six tests pass. Fixtures are synthetic, and we say so.",46/46 tests · Synthetic ≠ real,Dissolve
+23,110,115,Family Cup leaderboard,Real app screenshot: Family Cup (demo data),"Results, MVP and standings, all with reasons.",Family Cup,Fade to navy
+24,115,120,Cinematic closing statement,Real app screenshot: Launch + team credits,WASL Arena: a fair referee that shows its evidence.,WASL Arena / Team 204 · Code AYUCK · Cycle 3,End

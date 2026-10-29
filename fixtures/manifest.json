@@ -1,0 +1,146 @@
+{
+  "football_goal": {
+    "game": "football",
+    "synthetic": true,
+    "expect": {
+      "goals_A": 1,
+      "goals_B": 0,
+      "status": "VERIFIED",
+      "possession_leader": "A"
+    }
+  },
+  "football_nogoal": {
+    "game": "football",
+    "synthetic": true,
+    "expect": {
+      "goals_A": 0,
+      "goals_B": 0
+    }
+  },
+  "football_uncertain": {
+    "game": "football",
+    "synthetic": true,
+    "expect": {
+      "goals_A": 0,
+      "possible_goal": "NEEDS_REVIEW"
+    }
+  },
+  "falaj_valid": {
+    "game": "falaj",
+    "synthetic": true,
+    "expect": {
+      "destinations": 3,
+      "leaks": 0,
+      "time_bonus": 2,
+      "total": 11
+    }
+  },
+  "falaj_partial": {
+    "game": "falaj",
+    "synthetic": true,
+    "expect": {
+      "destinations": 2,
+      "leaks": 1,
+      "time_bonus": 0,
+      "total": 5
+    }
+  },
+  "falaj_rock": {
+    "game": "falaj",
+    "synthetic": true,
+    "expect": {
+      "destinations": 3,
+      "leaks": 1,
+      "time_bonus": 2,
+      "total": 10
+    }
+  },
+  "souq_correct": {
+    "game": "souq",
+    "synthetic": true,
+    "mission": {
+      "requested": [
+        "dates",
+        "coffee",
+        "pottery"
+      ],
+      "budget": 60
+    },
+    "transcript_script": [
+      {
+        "start": 1.7,
+        "end": 2.8,
+        "text": "I choose dates"
+      },
+      {
+        "start": 5.7,
+        "end": 6.6,
+        "text": "Coffee please"
+      },
+      {
+        "start": 9.7,
+        "end": 10.7,
+        "text": "And the pottery"
+      }
+    ],
+    "expect": {
+      "total": 9,
+      "spend": 55
+    }
+  },
+  "souq_mismatch": {
+    "game": "souq",
+    "synthetic": true,
+    "mission": {
+      "requested": [
+        "dates"
+      ],
+      "budget": 60
+    },
+    "transcript_script": [
+      {
+        "start": 1.8,
+        "end": 2.8,
+        "text": "I choose honey"
+      }
+    ],
+    "expect": {
+      "mismatch": true,
+      "total": 2
+    }
+  },
+  "souq_budget_dup": {
+    "game": "souq",
+    "synthetic": true,
+    "mission": {
+      "requested": [
+        "dates",
+        "pottery",
+        "coffee"
+      ],
+      "budget": 50
+    },
+    "transcript_script": [
+      {
+        "start": 1.7,
+        "end": 2.3,
+        "text": "dates"
+      },
+      {
+        "start": 4.7,
+        "end": 5.3,
+        "text": "pottery"
+      },
+      {
+        "start": 13.7,
+        "end": 14.3,
+        "text": "coffee"
+      }
+    ],
+    "expect": {
+      "duplicate": true,
+      "budget_exceeded": true,
+      "total": 7
+    }
+  }
+}

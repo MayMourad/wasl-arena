@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: wasl-arena-judge
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.1-flash-lite
+      - key: JUDGE_SIGNING_KEY
+        generateValue: true
+      - key: CORS_ORIGINS
+        sync: false
