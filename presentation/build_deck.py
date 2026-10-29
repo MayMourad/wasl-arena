@@ -148,7 +148,7 @@ framed(s, EVD / "football_goal/goal-2-before.jpg", 6.9, 1.9, 5.8, "Tracked ball 
 # 13 Football referee replay
 s = slide("Football AI: referee replay", "Evidence", notes="Here is a verified goal: the AI saw the ball outside the zone, then inside for several consecutive samples. The evidence frames before, at and after the moment are attached. A goal whose entry was not observed becomes needs review.")
 framed(s, EVD / "football_goal/goal-2-moment.jpg", 0.6, 1.8, 5.8, "The moment"); framed(s, EVD / "football_goal/goal-2-after.jpg", 6.8, 1.8, 5.8, "After")
-bullets(s, 0.6, 5.6, 12, 1.5, ["Rule FB-1: ball observed entering the goal zone after being seen outside: **+1**", "Ball lost near the goal → **POSSIBLE_GOAL**, 0 points until the host decides"], 17)
+bullets(s, 0.6, 6.0, 12, 1.0, ["Rule FB-1: ball observed entering the goal zone after being seen outside: **+1**   ·   Ball lost near the goal → **POSSIBLE_GOAL**, 0 points until the host decides"], 15)
 # 14 Falaj overview
 s = slide("Falaj Flow: overview", "Game 2 · Team", notes="Falaj is the traditional UAE irrigation system. Teams build a channel network with printed tiles on a 5 by 5 board. Three farms need water; a rock blocks the middle; 90 seconds per round.")
 bullets(s, 0.6, 1.9, 6.0, 4.6, ["Inspired by the UAE **falaj** irrigation system", "Printed 5×5 board: **well**, three **farms**, a **rock**", "Teams place channel tiles for **90 seconds**", "Farm **+3** · leak **−1** · speed bonus up to **+2**", "Tie: shortest valid network, then time"], 20)
@@ -216,10 +216,10 @@ for i, f in enumerate(fx):
     rect(s, x, y, 3.95, 0.9, C["white"], MSO_SHAPE.ROUNDED_RECTANGLE, C["line"]); text(s, x + 0.15, y + 0.05, 3.7, 0.4, f["name"] + ("  ✓" if f["pass"] else "  ✗"), 14, C["teal"], True)
     text(s, x + 0.15, y + 0.42, 3.7, 0.45, ", ".join(f"{k}={v}" for k, v in list(f["actual"].items())[:3]), 11)
 # 28 Deployment
-s = slide("GitHub and Vercel deployment", "Delivery", notes="Frontend deploys from GitHub to Vercel; backend runs on Render because video processing needs Python, FFmpeg and OpenCV. The API URL is an environment variable, and all credentials stay server-side. See the README for the live URLs once connected.")
-for i, (h, b) in enumerate([("GitHub", "Repository wasl-arena: frontend, backend, tests, docs, AI-usage records"), ("Vercel", "Frontend build · vercel.json · VITE_API_URL"), ("Render", "FastAPI judge · render.yaml · secrets as env vars")]):
+s = slide("GitHub and Vercel deployment", "Delivery", notes="The frontend is deployed from GitHub to Vercel; the judge runs on Render because video processing needs Python, FFmpeg and OpenCV. The frontend reaches the judge through an environment variable and all credentials stay on the server. We verified the live deployment: routes load, the header badge says AI judge online, a Falaj clip uploaded to the live judge was scored 11 with a valid seal, and CORS accepts only the Vercel origin. Free tier hosting sleeps when idle, so the first request can take about 30 seconds.")
+for i, (h, b) in enumerate([("GitHub", "MayMourad/wasl-arena (private): frontend, backend, tests, docs, AI-usage records"), ("Vercel · frontend", "frontend-three-fawn-47.vercel.app · VITE_API_URL points at the judge"), ("Render · AI judge", "wasl-arena.onrender.com · FastAPI + FFmpeg + OpenCV · secrets as env vars")]):
     card(s, 0.6 + i * 4.15, 1.9, 3.95, 2.6, h, b, [C["navy"], C["teal"], C["gold"]][i], C["white"] if i < 2 else C["navy"])
-bullets(s, 0.6, 4.9, 12, 2, ["Production build verified locally; configuration prepared", "**Live URLs:** see README (published only when verified)", "No secrets in the repository (.env git-ignored)"], 19)
+bullets(s, 0.6, 4.8, 12, 2.2, ["**Verified live:** all routes load, badge shows “AI judge online”, a Falaj clip judged on the live backend = 11 pts, seal valid", "CORS locked to the Vercel origin · no secrets in the repository (.env git-ignored)", "Free tier: first request after idle can take ~30 s"], 18)
 # 29 Limitations & future
 s = slide("Limitations and future development", "Next", notes="We are upfront about limits. Next steps are real footage evaluation, pretrained detectors, jersey number reading, and audio cues.")
 card(s, 0.6, 1.9, 6.0, 4.6, "Limitations", ["No real family footage evaluated yet", "Controlled setup: fixed camera, bright ball", "Colour segmentation is lighting-sensitive", "Printed markers can be hidden or damaged", "Speech timing ±~1 s; scores are heuristics"], C["white"], C["char"])

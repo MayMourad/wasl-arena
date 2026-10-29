@@ -65,7 +65,11 @@ Import `report.json` in Live Arena → "Import AI report". The app verifies SHA-
 * **Backend → Render:** `render.yaml` (root dir `backend`). Set `GEMINI_API_KEY`, `JUDGE_SIGNING_KEY`, `CORS_ORIGINS=https://<your-vercel-app>.vercel.app`.
 * Credentials live only in server environment variables. `.env` is git-ignored.
 
-**Deployment status:** configuration prepared; the production build passes locally. Live URLs are added here only after they are verified.
+**Live deployment (verified):**
+* App: https://frontend-three-fawn-47.vercel.app
+* AI judge API: https://wasl-arena.onrender.com/api/health
+* Checked: all routes 200, header badge "AI judge online", a Falaj fixture judged on the live backend scored 11 with a valid integrity seal, CORS restricted to the Vercel origin.
+* Free-tier hosting sleeps when idle (first request ~30 s) and does not persist uploads.
 
 ## Honest limitations
 Controlled setup (fixed camera, single-colour ball, contrasting shirts, calibrated goals); colour segmentation is lighting-sensitive; shirt numbers are not read (host assigns tracks to players); printed markers can be hidden; speech timing is approximate (about 1 s); detection scores are heuristics, not calibrated probabilities.

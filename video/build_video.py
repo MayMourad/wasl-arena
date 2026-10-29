@@ -32,7 +32,7 @@ SYN = "SYNTHETIC TEST FIXTURE: replace with real footage before submission"
 CLIPS = [
  ("Cinematic family-gaming opening", "Golden-hour courtyard in the UAE. A family of four plays football with a bright ball; a child laughs, the ball rolls toward a mini goal.",
   "Cinematic 16:9, golden hour UAE courtyard, family (father, mother, two children) playing mini football with a bright yellow ball, warm light, shallow depth of field, handheld feel, no text, no logos, photorealistic", "Slow push-in from low angle, subtle handheld", "AI-generated B-roll (generate), fallback: Launch screenshot", SHOT / "01-launch.png", "Every family has a game they love.", "", "Warm ambient courtyard, children laughing, soft oud pad rising", "Quick fade through white", None),
- ("The problem of fair game judging", "Same scene freezes. Family points in different directions: 'Goal!' 'No!' Whistle stops. Question mark graphic.",
+ ("The problem of fair game judging", "Same scene freezes on a whistle. Family members point in different directions, each sure they are right.",
   "Cinematic 16:9, family mid-argument over a football goal, pausing frame, expressive faces, warm tones, playful not angry, no text", "Static wide, then slow zoom on the argument", "AI-generated B-roll, fallback: text card", SHOT / "03-library.png", "But who decides what really happened?", "Was that a goal?", "Whistle, overlapping voices fade to silence", "Cut on whistle", None),
  ("WASL Arena brand reveal", "Navy background, the reactive orb blooms in teal; WASL Arena wordmark and tagline resolve.",
   "Abstract 16:9 motion graphic, midnight navy #12243A background, glowing teal #167E80 organic orb pulsing with subtle gold #C6A36B ring, elegant serif wordmark 'WASL Arena', premium, minimal", "Slow dolly-in on orb, wordmark fades in", "Real app: launch screen orb (screen capture)", SHOT / "01-launch.png", "Meet WASL Arena: one family, three games, one fair AI referee.", "WASL Arena\nOne family. Three games. One fair AI referee.", "Soft low swell, glass chime on logo", "Match-cut orb to app", None),
@@ -80,6 +80,9 @@ CLIPS = [
   "Abstract 16:9 closing card, orb on navy, serif text", "Slow pull-back", "Real app screenshot: Launch + team credits", SHOT / "01-launch.png", "WASL Arena: a fair referee that shows its evidence.", "WASL Arena\nTeam 204 · Code AYUCK · Cycle 3", "Resolving chord, silence", "End", None),
 ]
 assert len(CLIPS) == 24
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from script_data import DATA, STYLE, VO_DIRECTION, MUSIC  # noqa: E402
+CLIPS = [c[:6] + (DATA[i]["vo"],) + c[7:] for i, c in enumerate(CLIPS)]  # final voiceover
 
 
 def font(sz, bold=False):
@@ -142,7 +145,7 @@ if __name__ == "__main__":
     for i, c in enumerate(CLIPS):
         t0 = i * 5
         md += [f"## Clip {i + 1:02d}: {c[0]}  ({t0 // 60}:{t0 % 60:02d}–{(t0 + 5) // 60}:{(t0 + 5) % 60:02d})", "",
-               f"- **Scene (exactly 5 s):** {c[1]}", f"- **AI video prompt:** {c[2]}", f"- **Camera:** {c[3]}", f"- **Source asset:** {c[4]}",
+               f"- **Scene (exactly 5 s):** {c[1]}", f"- **Image-generation prompt:** {DATA[i]['img']}", f"- **Animation prompt:** {DATA[i]['anim']}", f"- **Camera:** {c[3]}", f"- **Source asset:** {c[4]}",
                f"- **Narration:** “{c[6]}”", f"- **On-screen text:** {c[7].replace(chr(10), ' / ') or '(none)'}", f"- **Sound / music:** {c[8]}", f"- **Transition to next:** {c[9]}", ""]
     md += ["## Style guide", "- Palette: midnight navy #12243A, ivory #F7F3EB, heritage teal #167E80, Emirates red #B92D39, muted gold #C6A36B.", "- Type: Fraunces (display), Inter (UI text). Pacing reference: product-focused launch videos with interface-led motion and clean transitions (original film, nothing copied).",
            "- Music: warm, restrained, one rising swell to the reveal (clip 03) and a resolving chord at the end; keep under narration; royalty-free or original only.", "",

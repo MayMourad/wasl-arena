@@ -1,24 +1,24 @@
-[  0s] Every family has a game they love.
-[  5s] But who decides what really happened?
-[ 10s] Meet WASL Arena: one family, three games, one fair AI referee.
-[ 15s] Football, Falaj Flow and Souq Signal. Team and individual play.
-[ 20s] A real app, built for real family game day.
-[ 25s] The host registers players, teams and match rules.
-[ 30s] Each game uses a different kind of AI.
-[ 35s] The host runs rounds, timers and turns.
-[ 40s] Real play, filmed on a fixed camera.
-[ 45s] The AI extracts evidence, detects events and applies the rules.
-[ 50s] It follows the ball and every player.
+[  0s] Every family has a game they love. Every game has an argument.
+[  5s] Was that a goal? Who said it first? Who decides?
+[ 10s] Meet WASL Arena. One family. Three games. One fair AI referee.
+[ 15s] Football, Falaj Flow, Souq Signal. Team play and solo play.
+[ 20s] A real, working app, built for family game day.
+[ 25s] The host registers players, picks teams and sets the rules.
+[ 30s] Each game challenges the AI in a different way.
+[ 35s] Rounds, timers and turns, all run from one host console.
+[ 40s] Football: real play, filmed on a single fixed camera.
+[ 45s] Upload the video. The AI extracts evidence and detects events.
+[ 50s] It tracks the ball and every player, frame by frame.
 [ 55s] A goal counts only when the ball is seen crossing the line.
-[ 60s] Falaj Flow: build channels to water the farms.
-[ 65s] Printed markers tell the AI each tile and its rotation.
-[ 70s] It rebuilds the network and traces the water.
-[ 75s] Three farms, zero leaks, a speed bonus: eleven points.
-[ 80s] Souq Signal: show it, say it, stay in budget.
-[ 85s] It sees the card and hears the player.
-[ 90s] Items, prices and budget are checked automatically.
-[ 95s] Correct items and matching speech earn points.
-[100s] If the AI is unsure, the host decides.
-[105s] Forty-six tests pass. Fixtures are synthetic, and we say so.
-[110s] Results, MVP and standings, all with reasons.
-[115s] WASL Arena: a fair referee that shows its evidence.
+[ 60s] Falaj Flow: build water channels the way the falaj once did.
+[ 65s] Printed markers tell the AI every tile and its rotation.
+[ 70s] It rebuilds the network as a graph and traces the water.
+[ 75s] Every farm watered, every leak counted. The score follows the evidence.
+[ 80s] Souq Signal: pick the cards, show them, say them.
+[ 85s] It sees the card, hears the voice, and checks they agree.
+[ 90s] Prices, budget and duplicates are verified automatically.
+[ 95s] Right items and matching words score. Overspending loses points.
+[100s] Unsure? The AI says so, and the host decides.
+[105s] Every rule is tested. The test clips are synthetic, and labelled.
+[110s] Results, MVP and standings. Every point comes with its reason.
+[115s] WASL Arena. A fair referee shows its evidence.

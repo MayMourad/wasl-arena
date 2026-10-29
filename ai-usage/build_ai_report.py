@@ -126,12 +126,13 @@ table([["Phase", "What the AI did", "Human / verification step"],
        ["5 Testing", f"Wrote {ev['pytest']['total']} tests and 9 synthetic fixtures with known ground truth", f"{ev['pytest']['passed']}/{ev['pytest']['total']} tests passed in the final run; fixtures are synthetic, not real gameplay"],
        ["6 Design iterations", "Applied the palette, Spline-inspired orb (original Three.js), Krea-style judging sequence; fixed contrast bug (invisible text) found in screenshots", "Screenshots reviewed by the AI and team"],
        ["7 Documentation", "Generated the 6-page report, 30-slide deck, video package and this report from real results", "Page count verified in Word (6 pages); slides rendered in PowerPoint (30)"],
-       ["8 Video scripting", "Wrote 24 × 5 s storyboard, prompts, narration, timeline; built a draft animatic from real screenshots", "Real gameplay clips (football, Falaj, Souq) must be recorded by the team"]], [2.8, 8.0, 6.6], size=8.5)
+       ["8 Video scripting", "Wrote the 24 × 5 s script: voiceover, image-generation prompts, animation prompts, shot list; built a draft animatic from real screenshots", "Real gameplay clips (football, Falaj, Souq) must be recorded by the team; AI imagery limited to atmosphere clips"],
+       ["9 Deployment & debugging", "Diagnosed the Render build failure from the team's pasted log (Root Directory not set), verified the live Render API with a real judging job, found the Vercel build lacked VITE_API_URL, verified CORS", "Team created the Render and Vercel projects, set environment variables and redeployed; AI checked the live site afterwards"]], [2.8, 8.0, 6.6], size=8.5)
 H("4. Human verification and adjustments", 14)
 for b in ["The team supplied the official competition materials, team identity, the ChatGPT conversation and the speech API key; the key was kept in a git-ignored server-side `.env` and is redacted in this report. Because the key appeared in a chat, **rotate it after the competition**.",
           "All numbers in the report/deck/Evaluation Lab are read from files produced by running the tests and pipelines.",
           "Synthetic fixtures are always labelled; real footage is pending and is not represented as tested.",
-          "Items still requiring human action: record real gameplay, review final wording, publish/verify GitHub and Vercel, final voice-over."]:
+          "Items still requiring human action: record real gameplay for football, Falaj and Souq, review final wording, record the voice-over and music, and rotate the API key used during development."]:
     P("•  " + b)
 H("5. Claude Code activity summary", 14)
 table([["Tool category", "Calls"]] + [[k, v] for k, v in tools.most_common(12)], [9, 3])
