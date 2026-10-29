@@ -18,6 +18,9 @@ WASL Arena is a working web app where a family plays three games while an AI ref
 | **Falaj Flow** | Team | Reads a printed 5x5 board and tiles (ArUco markers), rebuilds the channel network as a graph, traces water to three farms |
 | **Souq Signal** | Individual | Recognises product cards, transcribes Arabic/English speech, checks audio and video agree, does budget maths |
 
+## Submission files
+Download from the [v1.0-submission release](https://github.com/MayMourad/wasl-arena/releases/tag/v1.0-submission): 30-slide deck (.pptx), 6-page technical report (PDF + Word), AI chat usage report (PDF), final 2-minute video script (PDF), draft 120 s animatic (MP4). Recording guide for real gameplay: [docs/REAL_FOOTAGE.md](docs/REAL_FOOTAGE.md).
+
 ## Screens (all working)
 Launch · Family Setup · Game Library · Game Preparation · Live Arena · AI Referee Replay · Family Cup · Evaluation Lab. Printable boards, tiles and cards are in `frontend/public/printables/`.
 
