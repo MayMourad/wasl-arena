@@ -1,0 +1,513 @@
+{
+ "generated_at": "2026-10-29T11:50:15+00:00",
+ "pytest": {
+  "total": 46,
+  "passed": 46,
+  "failed": 0,
+  "skipped": 0,
+  "cases": [
+   {
+    "name": "test_complete_valid_route",
+    "file": "test_falaj_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_partial_network_leaks_and_misses_destination",
+    "file": "test_falaj_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_blocked_route_closed_side_breaks_upper_branch",
+    "file": "test_falaj_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_invalid_connection_into_rock_is_a_leak",
+    "file": "test_falaj_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_edge_leak_and_illegal_placement",
+    "file": "test_falaj_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_empty_board_scores_zero",
+    "file": "test_falaj_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_time_bonus_tiers",
+    "file": "test_falaj_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_tie_break_shortest_network_then_time",
+    "file": "test_falaj_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_rotation_semantics",
+    "file": "test_falaj_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_valid_goal_scores_for_attacking_team",
+    "file": "test_football_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_no_goal_is_a_draw_with_zero_points",
+    "file": "test_football_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_uncertain_detection_is_not_counted_until_host_accepts",
+    "file": "test_football_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_score_update_across_multiple_goals",
+    "file": "test_football_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_tie_break_golden_goal_and_draw",
+    "file": "test_football_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_host_penalty_reduces_score",
+    "file": "test_football_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_mvp_is_longest_possession_and_ties_need_host",
+    "file": "test_football_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_possession_unknown_time_never_credited",
+    "file": "test_football_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_seal_verify_and_tamper_detection",
+    "file": "test_integrity_api",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_forged_signature_rejected",
+    "file": "test_integrity_api",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_health_and_catalog",
+    "file": "test_integrity_api",
+    "status": "passed",
+    "seconds": 0.02
+   },
+   {
+    "name": "test_falaj_analyze_endpoint",
+    "file": "test_integrity_api",
+    "status": "passed",
+    "seconds": 0.01
+   },
+   {
+    "name": "test_upload_job_report_review_flow",
+    "file": "test_integrity_api",
+    "status": "passed",
+    "seconds": 1.67
+   },
+   {
+    "name": "test_tampered_report_is_rejected_on_import",
+    "file": "test_integrity_api",
+    "status": "passed",
+    "seconds": 2.26
+   },
+   {
+    "name": "test_audit_chain_detects_tampering",
+    "file": "test_integrity_api",
+    "status": "passed",
+    "seconds": 0.13
+   },
+   {
+    "name": "test_football_valid_goal",
+    "file": "test_pipelines",
+    "status": "passed",
+    "seconds": 0.94
+   },
+   {
+    "name": "test_football_no_goal",
+    "file": "test_pipelines",
+    "status": "passed",
+    "seconds": 0.81
+   },
+   {
+    "name": "test_football_uncertain_detection_is_not_scored",
+    "file": "test_pipelines",
+    "status": "passed",
+    "seconds": 0.85
+   },
+   {
+    "name": "test_football_mvp_from_longest_possession",
+    "file": "test_pipelines",
+    "status": "passed",
+    "seconds": 0.88
+   },
+   {
+    "name": "test_falaj_video_scoring[falaj_valid-11-3-0-2]",
+    "file": "test_pipelines",
+    "status": "passed",
+    "seconds": 1.01
+   },
+   {
+    "name": "test_falaj_video_scoring[falaj_partial-5-2-1-0]",
+    "file": "test_pipelines",
+    "status": "passed",
+    "seconds": 0.88
+   },
+   {
+    "name": "test_falaj_video_scoring[falaj_rock-10-3-1-2]",
+    "file": "test_pipelines",
+    "status": "passed",
+    "seconds": 1.18
+   },
+   {
+    "name": "test_falaj_reconstructs_exact_tiles",
+    "file": "test_pipelines",
+    "status": "passed",
+    "seconds": 1.25
+   },
+   {
+    "name": "test_souq_correct_selection",
+    "file": "test_pipelines",
+    "status": "passed",
+    "seconds": 1.73
+   },
+   {
+    "name": "test_souq_audio_video_mismatch",
+    "file": "test_pipelines",
+    "status": "passed",
+    "seconds": 0.58
+   },
+   {
+    "name": "test_souq_budget_and_duplicate",
+    "file": "test_pipelines",
+    "status": "passed",
+    "seconds": 1.43
+   },
+   {
+    "name": "test_souq_without_transcript_is_review_not_credit",
+    "file": "test_pipelines",
+    "status": "passed",
+    "seconds": 1.14
+   },
+   {
+    "name": "test_correct_selection_scores_item_plus_spoken_match",
+    "file": "test_souq_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_incorrect_selection_earns_no_points_but_costs_budget",
+    "file": "test_souq_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_audio_video_mismatch_needs_review_and_scores_nothing_extra",
+    "file": "test_souq_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_spoken_but_not_shown_is_flagged",
+    "file": "test_souq_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_budget_violation_penalty_once",
+    "file": "test_souq_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_duplicate_selection_gives_no_additional_points",
+    "file": "test_souq_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_second_card_of_same_product_is_duplicate",
+    "file": "test_souq_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_no_transcript_never_credits_spoken_match",
+    "file": "test_souq_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_arabic_and_english_keyword_matching",
+    "file": "test_souq_rules",
+    "status": "passed",
+    "seconds": 0.0
+   },
+   {
+    "name": "test_tie_break_lower_spend_then_time",
+    "file": "test_souq_rules",
+    "status": "passed",
+    "seconds": 0.0
+   }
+  ]
+ },
+ "fixtures": [
+  {
+   "name": "football_goal",
+   "game": "football",
+   "synthetic": true,
+   "expected": {
+    "goals_A": 1,
+    "goals_B": 0,
+    "status": "VERIFIED",
+    "possession_leader": "A"
+   },
+   "actual": {
+    "goals_A": 1,
+    "goals_B": 0,
+    "verified_goal_events": 1,
+    "possible_goal": null,
+    "possession_leader": "A"
+   },
+   "pass": true,
+   "report": "sample-football_goal",
+   "transcript_source": null,
+   "events": 2,
+   "needs_review": 0
+  },
+  {
+   "name": "football_nogoal",
+   "game": "football",
+   "synthetic": true,
+   "expected": {
+    "goals_A": 0,
+    "goals_B": 0
+   },
+   "actual": {
+    "goals_A": 0,
+    "goals_B": 0,
+    "verified_goal_events": 0,
+    "possible_goal": null,
+    "possession_leader": "A"
+   },
+   "pass": true,
+   "report": "sample-football_nogoal",
+   "transcript_source": null,
+   "events": 4,
+   "needs_review": 0
+  },
+  {
+   "name": "football_uncertain",
+   "game": "football",
+   "synthetic": true,
+   "expected": {
+    "goals_A": 0,
+    "possible_goal": "NEEDS_REVIEW"
+   },
+   "actual": {
+    "goals_A": 0,
+    "goals_B": 0,
+    "verified_goal_events": 0,
+    "possible_goal": "NEEDS_REVIEW",
+    "possession_leader": "A"
+   },
+   "pass": true,
+   "report": "sample-football_uncertain",
+   "transcript_source": null,
+   "events": 2,
+   "needs_review": 1
+  },
+  {
+   "name": "falaj_valid",
+   "game": "falaj",
+   "synthetic": true,
+   "expected": {
+    "destinations": 3,
+    "leaks": 0,
+    "time_bonus": 2,
+    "total": 11
+   },
+   "actual": {
+    "destinations": 3,
+    "leaks": 0,
+    "time_bonus": 2,
+    "total": 11
+   },
+   "pass": true,
+   "report": "sample-falaj_valid",
+   "transcript_source": null,
+   "events": 4,
+   "needs_review": 0
+  },
+  {
+   "name": "falaj_partial",
+   "game": "falaj",
+   "synthetic": true,
+   "expected": {
+    "destinations": 2,
+    "leaks": 1,
+    "time_bonus": 0,
+    "total": 5
+   },
+   "actual": {
+    "destinations": 2,
+    "leaks": 1,
+    "time_bonus": 0,
+    "total": 5
+   },
+   "pass": true,
+   "report": "sample-falaj_partial",
+   "transcript_source": null,
+   "events": 3,
+   "needs_review": 0
+  },
+  {
+   "name": "falaj_rock",
+   "game": "falaj",
+   "synthetic": true,
+   "expected": {
+    "destinations": 3,
+    "leaks": 1,
+    "time_bonus": 2,
+    "total": 10
+   },
+   "actual": {
+    "destinations": 3,
+    "leaks": 1,
+    "time_bonus": 2,
+    "total": 10
+   },
+   "pass": true,
+   "report": "sample-falaj_rock",
+   "transcript_source": null,
+   "events": 5,
+   "needs_review": 0
+  },
+  {
+   "name": "souq_correct",
+   "game": "souq",
+   "synthetic": true,
+   "expected": {
+    "total": 9,
+    "spend": 55
+   },
+   "actual": {
+    "total": 9,
+    "spend": 55,
+    "mismatch": false,
+    "duplicate": false,
+    "budget_exceeded": false
+   },
+   "pass": true,
+   "report": "sample-souq_correct",
+   "transcript_source": "host_entered",
+   "events": 6,
+   "needs_review": 0
+  },
+  {
+   "name": "souq_mismatch",
+   "game": "souq",
+   "synthetic": true,
+   "expected": {
+    "mismatch": true,
+    "total": 2
+   },
+   "actual": {
+    "total": 2,
+    "spend": 12,
+    "mismatch": true,
+    "duplicate": false,
+    "budget_exceeded": false
+   },
+   "pass": true,
+   "report": "sample-souq_mismatch",
+   "transcript_source": "host_entered",
+   "events": 2,
+   "needs_review": 1
+  },
+  {
+   "name": "souq_budget_dup",
+   "game": "souq",
+   "synthetic": true,
+   "expected": {
+    "duplicate": true,
+    "budget_exceeded": true,
+    "total": 7
+   },
+   "actual": {
+    "total": 7,
+    "spend": 55,
+    "mismatch": false,
+    "duplicate": true,
+    "budget_exceeded": true
+   },
+   "pass": true,
+   "report": "sample-souq_budget_dup",
+   "transcript_source": "host_entered",
+   "events": 8,
+   "needs_review": 0
+  }
+ ],
+ "transcription_check": {
+  "status": "OK",
+  "source": "gemini-3.1-flash-lite (transcription only)",
+  "segments": [
+   {
+    "start": 1.75,
+    "end": 2.55,
+    "text": "I choose dates."
+   },
+   {
+    "start": 5.85,
+    "end": 6.75,
+    "text": "Coffee, please."
+   },
+   {
+    "start": 9.75,
+    "end": 10.75,
+    "text": "And the pottery."
+   }
+  ],
+  "reason": null,
+  "total": 9,
+  "expected_total": 9,
+  "report": "sample-souq_correct_gemini"
+ },
+ "real_footage": {
+  "status": "pending",
+  "note": "No real recorded family gameplay has been analysed yet. All fixtures above are SYNTHETIC renders with known ground truth."
+ }
+}
