@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # usage: tools/shoot.sh BASE_URL  -> docs/screenshots/*.png (real captures of the running app)
-BASE=${1:-http://127.0.0.1:5173}
+BASE=${1:-https://frontend-three-fawn-47.vercel.app}
 CH="/c/Program Files/Google/Chrome/Application/chrome.exe"
 mkdir -p docs/screenshots
 shot(){ "$CH" --headless=new --disable-gpu --use-angle=swiftshader --enable-unsafe-swiftshader --hide-scrollbars --window-size=1440,900 --virtual-time-budget=12000 --screenshot="$(cygpath -w "$PWD/docs/screenshots/$1.png")" "$BASE$2" >/dev/null 2>&1; echo "$1 $(stat -c %s docs/screenshots/$1.png 2>/dev/null)"; }
