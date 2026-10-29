@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import type { Any } from '../lib/api'
+import { asset, type Any } from '../lib/api'
 
 const GAME: Record<string, string> = { football: 'Football AI', falaj: 'Falaj Flow', souq: 'Souq Signal' }
 
 export default function Lab() {
   const [ev, setEv] = useState<Any | null>(null)
   const [fail, setFail] = useState(false)
-  useEffect(() => { fetch('/evaluation.json').then((r) => r.json()).then(setEv).catch(() => setFail(true)) }, [])
+  useEffect(() => { fetch(asset('evaluation.json')).then((r) => r.json()).then(setEv).catch(() => setFail(true)) }, [])
   if (fail) return <div className="p-16 text-center">evaluation.json missing. Run <code>python tools/export_samples.py</code>.</div>
   if (!ev) return <div className="p-16 text-center text-charcoal/60">Loading results…</div>
   const fx: Any[] = ev.fixtures

@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
-import { audit, type Any } from './api'
+import { asset, audit, type Any } from './api'
 
 export type GameId = 'football' | 'falaj' | 'souq'
 export type Player = { id: string; name: string }
@@ -89,7 +89,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
 
   /** Demo session built from the pre-computed sample reports (synthetic fixtures; flagged sample:true). */
   const loadDemo = useCallback(async () => {
-    const get = async (n: string): Promise<Any> => (await fetch(`/samples/${n}.json`)).json()
+    const get = async (n: string): Promise<Any> => (await fetch(asset(`samples/${n}.json`))).json()
     const [fb, fv, fp, sc, sb] = await Promise.all(['football_goal', 'falaj_valid', 'falaj_partial', 'souq_correct', 'souq_budget_dup'].map(get))
     const players = ['Sara', 'Omar', 'Mariam', 'Khalid'].map((n, i) => ({ id: `p${i + 1}`, name: n }))
     const mk = (g: GameId, round: number, subject: string, label: string, rep: Any, score: number, extra: Partial<Result> = {}): Result => ({

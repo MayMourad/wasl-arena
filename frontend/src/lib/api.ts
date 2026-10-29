@@ -4,6 +4,9 @@ export type Any = any
 
 export const API = (import.meta.env.VITE_API_URL as string | undefined)?.replace(/\/$/, '') ?? ''
 
+/** Static assets (samples, printables) resolve against the deploy base path (works on Vercel and GitHub Pages). */
+export const asset = (p: string) => `${import.meta.env.BASE_URL}${p.replace(/^\//, '')}`
+
 export const url = (p: string) => (p.startsWith('http') ? p : `${API}${p}`)
 
 export async function health(): Promise<Any | null> {
@@ -33,7 +36,7 @@ export async function getJob(id: string): Promise<Any> {
 /** Reports: live API ids, or pre-computed samples ("sample-<fixture>") served statically. */
 export async function getReport(id: string): Promise<Any> {
   if (id.startsWith('sample-')) {
-    const r = await fetch(`/samples/${id.slice(7)}.json`)
+    const r = await fetch(asset(`samples/${id.slice(7)}.json`))
     if (!r.ok) throw new Error('sample not found')
     return r.json()
   }
@@ -43,9 +46,9 @@ export async function getReport(id: string): Promise<Any> {
 }
 
 export const mediaUrl = (report: Any) =>
-  report?.sample ? `/samples/${report.sample}.mp4` : url(`/api/media/${report.report_id}`)
+  report?.sample ? asset(`samples/${report.sample}.mp4`) : url(`/api/media/${report.report_id}`)
 
-export const evidenceUrl = (report: Any, thumb: string) => (report?.sample ? thumb : url(thumb))
+export const evidenceUrl = (report: Any, thumb: string) => (report?.sample ? asset(thumb) : url(thumb))
 
 export async function postReview(id: string, event_id: string, decision: string, by: string, note = '') {
   const r = await fetch(url(`/api/reports/${id}/review`), {

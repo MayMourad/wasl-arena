@@ -7,7 +7,7 @@ import { SessionProvider } from './lib/store'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <SessionProvider>
         <App />
       </SessionProvider>

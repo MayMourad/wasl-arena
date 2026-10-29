@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { GameArt } from '../components/GameArt'
 import { COLOR_SWATCH, PRODUCTS, RULES } from '../lib/catalog'
+import { asset } from '../lib/api'
 import { GAMES, useSession, type GameId } from '../lib/store'
 
 const EQUIP: Record<GameId, string[]> = {
@@ -84,8 +85,8 @@ export default function Prepare() {
           {game !== 'football' && (
             <section className="card p-6"><h2 className="text-xl mb-2">Printables</h2><p className="text-sm text-charcoal/75 mb-3">Print at 100% scale on A4. Each marker is a unique printed code the AI reads.</p>
               <div className="flex flex-col gap-2">
-                {game === 'falaj' && <><a className="btn btn-gold" href="/printables/falaj-board.html" target="_blank" rel="noreferrer">⬇ Falaj board (A3/A4)</a><a className="btn btn-ghost" href="/printables/falaj-tiles.html" target="_blank" rel="noreferrer">⬇ Channel tiles (16)</a></>}
-                {game === 'souq' && <a className="btn btn-gold" href="/printables/souq-cards.html" target="_blank" rel="noreferrer">⬇ Product cards (16)</a>}
+                {game === 'falaj' && <><a className="btn btn-gold" href={asset('printables/falaj-board.html')} target="_blank" rel="noreferrer">⬇ Falaj board (A3/A4)</a><a className="btn btn-ghost" href={asset('printables/falaj-tiles.html')} target="_blank" rel="noreferrer">⬇ Channel tiles (16)</a></>}
+                {game === 'souq' && <a className="btn btn-gold" href={asset('printables/souq-cards.html')} target="_blank" rel="noreferrer">⬇ Product cards (16)</a>}
               </div><p className="text-xs text-charcoal/60 mt-3">Opens a print-ready page: use “Print / Save as PDF”.</p></section>)}
           <section className="card p-6 bg-navy !border-navy text-white"><h2 className="text-xl !text-ivory mb-2">Fairness promise</h2><p className="text-sm text-white/80">The AI only scores what it can see and hear. Anything uncertain waits for the host — nothing is guessed.</p></section>
         </aside>
