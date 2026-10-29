@@ -20,3 +20,6 @@ docs/report-preview/
 presentation/preview/
 backend/pytest-report.xml
 video/script-preview/
+
+real-footage/*
+!real-footage/README.txt
