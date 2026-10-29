@@ -7,7 +7,7 @@
 <p align="center"><b>6th Annual COE STEM Programming with AI Competition &middot; Abu Dhabi University &middot; Theme: AI for Family</b></p>
 
 <p align="center">
-  <a href="https://frontend-three-fawn-47.vercel.app"><img src="https://img.shields.io/badge/%E2%96%B6%20LIVE%20PROTOTYPE-open%20the%20app-167E80?style=for-the-badge" alt="Live prototype"></a>
+  <a href="https://maymourad.github.io/wasl-arena"><img src="https://img.shields.io/badge/%E2%96%B6%20LIVE%20PROTOTYPE-open%20the%20app-167E80?style=for-the-badge" alt="Live prototype"></a>
   <a href="https://github.com/MayMourad/wasl-arena/blob/main/docs/tour/website-tour.mp4"><img src="https://img.shields.io/badge/WATCH-full%20walkthrough%20(MP4)-12243A?style=for-the-badge" alt="Walkthrough video"></a>
   <a href="https://github.com/MayMourad/wasl-arena/releases/download/v1.0-submission/WASL-Arena-30-Slides.pdf"><img src="https://img.shields.io/badge/DOWNLOAD-slides%20PDF-C6A36B?style=for-the-badge" alt="Slides PDF"></a>
 </p>
@@ -20,10 +20,10 @@
 </p>
 
 <p align="center">
-  <a href="https://frontend-three-fawn-47.vercel.app"><img src="docs/screenshots/01-launch.png" width="900" alt="WASL Arena launch screen: interactive AI-Referee orb"></a>
+  <a href="https://maymourad.github.io/wasl-arena"><img src="docs/screenshots/01-launch.png" width="900" alt="WASL Arena launch screen: interactive AI-Referee orb"></a>
 </p>
 
-<p align="center"><i>The deployed website (launch screen). <a href="https://frontend-three-fawn-47.vercel.app">Open the live app &rarr;</a></i></p>
+<p align="center"><i>The deployed website (launch screen). <a href="https://maymourad.github.io/wasl-arena">Open the live app &rarr;</a></i></p>
 
 <h2 align="center">Watch the full prototype working</h2>
 
@@ -39,19 +39,20 @@
 
 <table>
   <tr><th align="left">Step</th><th align="left">Where</th><th align="left">What you will see</th></tr>
-  <tr><td>1</td><td><a href="https://frontend-three-fawn-47.vercel.app"><b>Open the app</b></a></td><td>The AI-Referee orb reacts to its state (Idle, Watching, Processing, Verified, Review). The header badge shows <b>AI judge online</b>.</td></tr>
-  <tr><td>2</td><td><a href="https://frontend-three-fawn-47.vercel.app/replay?report=sample-football_goal">Football replay</a></td><td>A judged clip: video with tracking overlay, evidence frames, the rule applied, score change, verification status and integrity hashes.</td></tr>
-  <tr><td>3</td><td><a href="https://frontend-three-fawn-47.vercel.app/replay?report=sample-falaj_valid">Falaj Flow replay</a></td><td>Split screen: the physical board and the digital twin rebuilt by the AI, water tracing the validated route.</td></tr>
-  <tr><td>4</td><td><a href="https://frontend-three-fawn-47.vercel.app/replay?report=sample-souq_correct_gemini">Souq Signal replay</a></td><td>Cards recognised, speech transcribed (Arabic/English), verified basket and budget.</td></tr>
+  <tr><td>1</td><td><a href="https://maymourad.github.io/wasl-arena"><b>Open the app</b></a></td><td>The AI-Referee orb reacts to its state (Idle, Watching, Processing, Verified, Review). The header badge shows <b>AI judge online</b>.</td></tr>
+  <tr><td>2</td><td><a href="https://maymourad.github.io/wasl-arena/replay?report=sample-football_goal">Football replay</a></td><td>A judged clip: video with tracking overlay, evidence frames, the rule applied, score change, verification status and integrity hashes.</td></tr>
+  <tr><td>3</td><td><a href="https://maymourad.github.io/wasl-arena/replay?report=sample-falaj_valid">Falaj Flow replay</a></td><td>Split screen: the physical board and the digital twin rebuilt by the AI, water tracing the validated route.</td></tr>
+  <tr><td>4</td><td><a href="https://maymourad.github.io/wasl-arena/replay?report=sample-souq_correct_gemini">Souq Signal replay</a></td><td>Cards recognised, speech transcribed (Arabic/English), verified basket and budget.</td></tr>
   <tr><td>5</td><td><b>Live Arena &rarr; Upload video &rarr; Send to AI Referee</b></td><td>Your own clip is judged by the live backend through five real stages, then opens in Replay.</td></tr>
-  <tr><td>6</td><td><a href="https://frontend-three-fawn-47.vercel.app/lab">Evaluation Lab</a></td><td>The tests that actually ran, expected vs actual, and an honest synthetic-vs-real note.</td></tr>
+  <tr><td>6</td><td><a href="https://maymourad.github.io/wasl-arena/lab">Evaluation Lab</a></td><td>The tests that actually ran, expected vs actual, and an honest synthetic-vs-real note.</td></tr>
 </table>
 
 <p><i>The free-tier AI judge sleeps when idle: the first live upload after a break can take about 30 s. The sample replays work instantly.</i></p>
 
 <p>
 <b>Links:</b>
-<a href="https://frontend-three-fawn-47.vercel.app">App</a> &middot;
+<a href="https://maymourad.github.io/wasl-arena">App (GitHub Pages)</a> &middot;
+<a href="https://frontend-three-fawn-47.vercel.app">App (Vercel mirror)</a> &middot;
 <a href="https://wasl-arena.onrender.com/api/health">AI judge health</a> &middot;
 <a href="https://github.com/MayMourad/wasl-arena/blob/main/docs/tour/website-tour.mp4">Walkthrough video</a> &middot;
 <a href="https://github.com/MayMourad/wasl-arena/releases/download/v1.0-submission/WASL-Arena-Technical-Report.pdf">Technical report (PDF)</a> &middot;
@@ -185,7 +186,7 @@ python ../tools/export_samples.py    # regenerates frontend/public/samples + eva
   <li>Credentials live only in server environment variables. <code>.env</code> is git-ignored.</li>
 </ul>
 
-<p><b>Live deployment (verified):</b> app <a href="https://frontend-three-fawn-47.vercel.app">frontend-three-fawn-47.vercel.app</a> &middot; AI judge <a href="https://wasl-arena.onrender.com/api/health">wasl-arena.onrender.com</a>. All routes return 200, the header badge shows "AI judge online", a Falaj fixture judged on the live backend scored 11 with a valid integrity seal, CORS is restricted to the Vercel origin. Free-tier hosting sleeps when idle and does not persist uploads.</p>
+<p><b>Live deployment (verified):</b> app <a href="https://maymourad.github.io/wasl-arena">maymourad.github.io/wasl-arena</a> (GitHub Pages) and <a href="https://frontend-three-fawn-47.vercel.app">frontend-three-fawn-47.vercel.app</a> (Vercel) &middot; AI judge <a href="https://wasl-arena.onrender.com/api/health">wasl-arena.onrender.com</a>. All routes return 200, the header badge shows "AI judge online", a Falaj fixture judged on the live backend scored 11 with a valid integrity seal, CORS is restricted to the Vercel origin. Free-tier hosting sleeps when idle and does not persist uploads.</p>
 
 <h2>Honest limitations</h2>
 
